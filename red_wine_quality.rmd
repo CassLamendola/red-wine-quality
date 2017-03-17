@@ -1,23 +1,78 @@
----
-title: "Red Wine Quality"
-output: html_document
----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+# Red Wine Quality 
+## by Cassandra Lamendola
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, packages}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
 ```
 
-## R Markdown
+This report explores a dataset containing quality and the variables that affect it for approximately 1600 red wines.
+
+```{r echo=FALSE, Load_the_Data}
+wine <- read.csv('wineQualityReds.csv')
+```
+
+## Univariate Plots
+
+```{r echo=FALSE, Univariate_Plots}
+summary(wine)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = quality, data = wine, binwidth = 1)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = fixed.acidity, data = wine, binwidth = .5)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = volatile.acidity, data = wine, binwidth = .05)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = citric.acid, data = wine, binwidth = .01)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = residual.sugar, data = wine, binwidth = .2)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = chlorides, data = wine, binwidth = .01)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = free.sulfur.dioxide, data = wine, binwidth = 1)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = total.sulfur.dioxide, data = wine, binwidth = 5)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = density, data = wine, binwidth = .0005)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = pH, data = wine, binwidth = .02)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = sulphates, data = wine, binwidth = .05)
+```
+
+```{r echo=FALSE, Univariate_Plots}
+qplot(x = alcohol, data = wine, binwidth = .1)
+```
+
+## Univariate Analysis
 
 
-```{r}
+## Bivariate Plots
+
+```{r echo=FALSE, Bivariate_Plots}
 
 ```
 
-
-
-```{r}
-
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
